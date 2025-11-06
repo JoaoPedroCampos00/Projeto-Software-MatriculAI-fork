@@ -4,10 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'MatriculAI/css/home.css' %}">
     <title>MatriculAI</title>
 </head>
 <body>
-    Qualquer coisa
-    <a href="{% url 'paginaDuvidas' %}" class="botão">Botão para página de dúvidas</a>
+    <header class="header-principal">
+        <div class="titulo-header">
+            <img src="{% static 'MatriculAI/img/Logo site.png' %}" alt="Logo do matrículAI" class="logo">
+            <h1>MatriculAI</h1>
+        </div>
+        <nav class="menu-principal">
+            <a href="{% url 'paginaDuvidas' %}">Dúvidas</a>
+            <a href="">Sobre</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="titulo-principal">
+            <h1>Monte sua grade horária com inteligência</h1>
+            <h3>O MaticulAI é sua ferramenta inteligente para organizar as disciplinas da faculdade de forma visual e prática. Evite conflitos de horário e otimize seu semestre!</h3>
+        </div>
+        <div class="botao-comecar">
+            <a href="{% url 'login' %}">Começar a monta a Minha Grade</a>
+        </div>"
+
+        <div class="bloco-explicacao">
+            <h1>Como Funciona?</h1>
+        </div>
+
+
+    </main>
+
+    
 </body>
 </html>

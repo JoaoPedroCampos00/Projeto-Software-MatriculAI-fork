@@ -8,5 +8,5 @@ def home(request):
     return render(request, 'MatriculAI/home.html')
 
 def paginaDuvidas(request):
-    
+
     return render(request, 'MatriculAI/pagina-duvidas.html')

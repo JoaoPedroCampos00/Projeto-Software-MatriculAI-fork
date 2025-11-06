@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,7 +16,7 @@
 
     <header class="header-principal">
         <div class="titulo-header">
-            <img src="{% static 'img/Logo site.png' %}" alt="Logo do matrículAI" class="logo">
+            <img src="{% static 'MatriculAI/img/Logo site.png' %}" alt="Logo do matrículAI" class="logo">
             <h1>MatriculAI</h1>
         </div>
         <nav class="menu-principal">
@@ -75,6 +76,6 @@
         </div>
     </div>
     </main>
-    <script src ="static/MatriculAI/JavaScript/pagina-duvidasjs"></script>
+    <script src ="{% static 'MatriculAI/JavaScript/pagina-duvidasjs' %}"></script>
 </body>
 </html>

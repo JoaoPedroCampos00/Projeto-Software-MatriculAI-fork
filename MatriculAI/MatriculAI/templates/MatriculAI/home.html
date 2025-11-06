@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="Pt-BR">
 <head>
@@ -7,6 +8,6 @@
 </head>
 <body>
     Qualquer coisa
-    <a href="pagina-duvidas.html" class="botão">Botão para página de dúvidas</a>
+    <a href="{% url 'paginaDuvidas.html' %}" class="botão">Botão para página de dúvidas</a>
 </body>
 </html>

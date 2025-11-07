@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Reset básico */
+        * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        }
+
+        /* Corpo da página */
+        body {
+        background: linear-gradient(135deg, #0077ff, #00d4ff);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        flex-direction: column;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Container do formulário */
+        .container {
+        background: #fff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        width: 320px;
+        text-align: center;
+        }
+
+        /* Título */
+        h2 {
+        margin-bottom: 20px;
+        color: #333;
+        }
+
+        /* Labels e inputs */
+        label {
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+        color: #444;
+        font-weight: bold;
+        }
+
+        input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        }
+
+        input:focus {
+        border-color: #0077ff;
+        outline: none;
+        }
+
+        /* Botão */
+        button {
+        width: 50%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #0077ff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+
+        button:hover {
+        background-color: #005fcc;
+        }
+
+        /* Mensagem de sucesso */
+        .mensagem {
+        margin-top: 15px;
+        font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <p>email:</p>
+    <textarea></textarea>
+    <p>nome de usuário:</p>
+
+    <textarea></textarea>
+    <p>senha:</p>
+    <textarea></textarea>
+    <button id="matricula">criar conta</button>
+</body>
+</html>
+

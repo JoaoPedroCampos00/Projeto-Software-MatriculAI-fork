@@ -1,0 +1,188 @@
+th, td {
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    text-align: center;
+}
+            th {
+                font-family: sans-serif;
+                
+            }
+
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            } 
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+
+.add_turma {
+    width: 169px;
+    height: 31px;
+    background-color: #4a82ff;
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: "Arimo", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: 0px 2px 5.300000190734863px rgb(0 0 0 / 25%);
+    border-color: transparent;
+}
+
+add_turma:hover {
+    background-color: #7da6ed;
+}
+
+    .ins_horario {
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+tr td:first-child {
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+        .ins_horario th, .ins_horario td {
+    background-color: white;
+    overflow: hidden;
+}
+
+td {
+    border-right: 1px solid black;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+}
+
+    
+element.style {
+    width: 80.5px;
+    font-family: sans-serif;
+}
+.ins_horario th, .ins_horario td {
+    background-color: white;
+    overflow: hidden;
+}
+th {
+    font-size: 15.5px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 80.5px;
+    background-color: white;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+    border-bottom: 1px solid black;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+    table {
+    border-collapse: separate; /* Important for unified border */
+    border-radius: 10px; /* Adjust as needed */
+    overflow: hidden;
+    border-spacing: 0;
+    /* border: 1px solid black; */
+}
+
+th:last-child {
+    border-right: 1px solid black;
+}
+
+th:first-child {
+    border: 1px solid black;
+}
+
+.preenchido {
+                background: linear-gradient(180deg, #ffa500 0.0%, #ffc150 100.0%);
+                text-align: center;
+                font-size: 90%;
+                border: -2px solid black;
+                font-weight: 700;
+}
+
+.ins_horario {
+    height: 300px;
+    display: inline-table;
+    /* justify-content: center; */
+    border: none;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.sel {
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ins_horario tbody {
+    background: linear-gradient( 
+194deg, #03a9f4, #3f51b5);
+    border-radius: 10px;
+}
+
+.turma {
+    height: 25px;
+}
+
+.ttabela {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#horario_pos {
+    width: 469px;
+    height: 325.6000061035156px;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(117.15316728820562deg, #eff6ff 0.0%, #faf5ff  50.0%, #ffffff 100.0%);
+}
+
+#turmas td:first-child {
+    border-bottom: 1px solid black;
+}
+
+textarea, option {
+    font-family: "Inter", sans-serif;
+}
+   

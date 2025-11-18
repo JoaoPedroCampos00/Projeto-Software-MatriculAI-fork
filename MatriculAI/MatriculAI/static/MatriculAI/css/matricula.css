@@ -152,7 +152,7 @@ th:first-child {
 
 .ins_horario tbody {
     background: linear-gradient( 
-194deg, #03a9f4, #3f51b5);
+232deg, #8edcff, #051987);
     border-radius: 10px;
 }
 
@@ -185,4 +185,20 @@ body {
 textarea, option {
     font-family: "Inter", sans-serif;
 }
-   
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.ins_horario td:not(.ins_horario td:first-child) {
+    background-color: transparent;
+    padding: 0;
+}
+
+input[type="checkbox"]:checked {
+    background-color: transparent;
+}

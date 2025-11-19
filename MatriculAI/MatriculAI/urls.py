@@ -26,6 +26,7 @@ urlpatterns = [
     path('duvidas/', views.paginaDuvidas, name="paginaDuvidas"),
     path('cadastro/', views.paginaCadastro, name="paginaCadastro"),
     path('matricula/', views.matricula, name="matricula"),
-    path('MatriculAI/', include('MatriculAI.urls')),
+    #path('MatriculAI/', include('MatriculAI.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('matricula/addTurma', views.addTurma),
 ]

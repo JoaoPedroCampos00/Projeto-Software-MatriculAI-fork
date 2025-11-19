@@ -1,15 +1,16 @@
-
+{% load static %}
 <!-- saved from url=(0089)file:///c%3A/Users/bento.DESKTOP-U3P6UJT/OneDrive/Documents/code/proj-soft-4/proj4-4.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-        <link href="./proj4-5_files/css2.css" rel="stylesheet">
-        <link rel="stylesheet" href="matricula.css">
+        <link href="{% static 'MatriculAI/css/css2.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'MatriculAI/css/matricula.css' %}">
         
     </head>
     <body>
-        <form>
+        <form action="addTurma" method="post">
+            {% csrf_token %}
         <p class="sel">Insira o código da Matéria:  <textarea id="cod" style="margin: 0px;font-size: 123%;resize: none;width: 188px;height: 31px;border-radius: 5px;border: 1px solid #767676;margin-left: 30px;" name="cod"></textarea></p>
         <p style="margin-top: -12px; margin-bottom: -12px;"><button  class="add_turma" style="width: auto;" type="submit" name="pesquisar" value="pesquisar">Buscar no Banco de Dados da PUC</button><br><br> ou </p>
         
@@ -28,74 +29,74 @@
         </tr>
         <tr><td id="0">07-08
         </td>
-        <td><input type="checkbox" name="1"></td>
-        <td><input type="checkbox" name="2"></td>
-        <td><input type="checkbox" name="3"></td>
-        <td><input type="checkbox" name="4"></td>
-        <td><input type="checkbox" name="5"></td></tr>
+        <td><input type="checkbox" name="2/7"></td>
+        <td><input type="checkbox" name="3/7"></td>
+        <td><input type="checkbox" name="4/7"></td>
+        <td><input type="checkbox" name="5/7"></td>
+        <td><input type="checkbox" name="6/7"></td></tr>
         <tr><td id="6">08-09
         </td>
-        <td><input type="checkbox" name="7"></td>
-        <td><input type="checkbox" name="8"></td>
-        <td><input type="checkbox" name="9"></td>
-        <td><input type="checkbox" name="10"></td>
-        <td><input type="checkbox" name="11"></td></tr>
+        <td><input type="checkbox" name="2/8"></td>
+        <td><input type="checkbox" name="3/8"></td>
+        <td><input type="checkbox" name="4/8"></td>
+        <td><input type="checkbox" name="5/8"></td>
+        <td><input type="checkbox" name="6/8"></td></tr>
         <tr><td id="12">09-10
         </td>
-        <td><input type="checkbox" name="13"></td>
-        <td><input type="checkbox" name="14"></td>
-        <td><input type="checkbox" name="15"></td>
-        <td><input type="checkbox" name="16"></td>
-        <td><input type="checkbox" name="17"></td></tr>
+        <td><input type="checkbox" name="2/9"></td>
+        <td><input type="checkbox" name="3/9"></td>
+        <td><input type="checkbox" name="4/9"></td>
+        <td><input type="checkbox" name="5/9"></td>
+        <td><input type="checkbox" name="6/9"></td></tr>
         <tr><td id="18">10-11
         </td>
-        <td><input type="checkbox" name="19"></td>
-        <td><input type="checkbox" name="20"></td>
-        <td><input type="checkbox" name="21"></td>
-        <td><input type="checkbox" name="22"></td>
-        <td><input type="checkbox" name="23"></td></tr>
+        <td><input type="checkbox" name="2/10"></td>
+        <td><input type="checkbox" name="3/10"></td>
+        <td><input type="checkbox" name="4/10"></td>
+        <td><input type="checkbox" name="5/10"></td>
+        <td><input type="checkbox" name="6/10"></td></tr>
         <tr><td id="24">11-12
         </td>
-        <td><input type="checkbox" name="25"></td>
-        <td><input type="checkbox" name="26"></td>
-        <td><input type="checkbox" name="27"></td>
-        <td><input type="checkbox" name="28"></td>
-        <td><input type="checkbox" name="29"></td></tr>
+        <td><input type="checkbox" name="2/11"></td>
+        <td><input type="checkbox" name="3/11"></td>
+        <td><input type="checkbox" name="4/11"></td>
+        <td><input type="checkbox" name="5/11"></td>
+        <td><input type="checkbox" name="6/11"></td></tr>
         <tr><td id="30">12-13
         </td>
-        <td><input type="checkbox" name="31"></td>
-        <td><input type="checkbox" name="32"></td>
-        <td><input type="checkbox" name="33"></td>
-        <td><input type="checkbox" name="34"></td>
-        <td><input type="checkbox" name="35"></td></tr>
+        <td><input type="checkbox" name="2/12"></td>
+        <td><input type="checkbox" name="3/12"></td>
+        <td><input type="checkbox" name="4/12"></td>
+        <td><input type="checkbox" name="5/12"></td>
+        <td><input type="checkbox" name="6/12"></td></tr>
         <tr><td id="36">13-14
         </td>
-        <td><input type="checkbox" name="37"></td>
-        <td><input type="checkbox" name="38"></td>
-        <td><input type="checkbox" name="39"></td>
-        <td><input type="checkbox" name="40"></td>
-        <td><input type="checkbox" name="41"></td></tr>
+        <td><input type="checkbox" name="2/13"></td>
+        <td><input type="checkbox" name="3/13"></td>
+        <td><input type="checkbox" name="4/13"></td>
+        <td><input type="checkbox" name="5/13"></td>
+        <td><input type="checkbox" name="6/13"></td></tr>
         <tr><td id="42">14-15
         </td>
-        <td><input type="checkbox" name="43"></td>
-        <td><input type="checkbox" name="44"></td>
-        <td><input type="checkbox" name="45"></td>
-        <td><input type="checkbox" name="46"></td>
-        <td><input type="checkbox" name="47"></td></tr>
+        <td><input type="checkbox" name="2/14"></td>
+        <td><input type="checkbox" name="3/14"></td>
+        <td><input type="checkbox" name="4/14"></td>
+        <td><input type="checkbox" name="5/14"></td>
+        <td><input type="checkbox" name="6/14"></td></tr>
         <tr><td id="48">15-16
         </td>
-        <td><input type="checkbox" name="49"></td>
-        <td><input type="checkbox" name="50"></td>
-        <td><input type="checkbox" name="51"></td>
-        <td><input type="checkbox" name="52"></td>
-        <td><input type="checkbox" name="53"></td></tr>
+        <td><input type="checkbox" name="2/15"></td>
+        <td><input type="checkbox" name="3/15"></td>
+        <td><input type="checkbox" name="4/15"></td>
+        <td><input type="checkbox" name="5/15"></td>
+        <td><input type="checkbox" name="6/15"></td></tr>
         <tr><td id="54">16-17
         </td>
-        <td><input type="checkbox" name="55"></td>
-        <td><input type="checkbox" name="56"></td>
-        <td><input type="checkbox" name="57"></td>
-        <td><input type="checkbox" name="58"></td>
-        <td><input type="checkbox" name="59"></td>
+        <td><input type="checkbox" name="2/16"></td>
+        <td><input type="checkbox" name="3/16"></td>
+        <td><input type="checkbox" name="4/16"></td>
+        <td><input type="checkbox" name="5/16"></td>
+        <td><input type="checkbox" name="6/16"></td></tr>
         </tr>
         </tbody>
         </table><br>
@@ -126,7 +127,18 @@
                         background-color: transparent;
                     "></th>
                 </tr>
-           <tr class="turma"><td>ENG4021</td><td>Sex 09-11</td><td><button onclick="rem_turma(0)" class="del_turma">🗑</button></td></tr><tr class="turma"><td>ENG4021</td><td>Sex 07-09</td><td><button onclick="rem_turma(1)" class="del_turma">🗑</button></td></tr></tbody>
+           <tr class="turma">
+                <td>ENG4021</td><td>Sex 09-11</td><td><button onclick="rem_turma(0)" class="del_turma">🗑</button></td></tr>
+            <tr class="turma">
+                <td>ENG4021</td><td>Sex 07-09</td><td><button onclick="rem_turma(1)" class="del_turma">🗑</button></td></tr>
+            {% for turma in turmas %}
+            <tr>
+                <td>{{ turma.cod }}</td>
+                <td>{{ turma.hrtxt }}</td>
+                <td><button onclick="rem_turma(1)" class="del_turma">🗑</button></td>
+            </tr>
+            {% endfor %}
+            </tbody>
         </table></div>
         
         <button id="possibilidades" onclick="testaPossibilidades()" style="

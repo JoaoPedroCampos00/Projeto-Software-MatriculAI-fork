@@ -1,5 +1,8 @@
 materias = [{"cod":"ENG4021","hrs":[{"dia":6,"hi":7,"hf":9}]},{"cod":"ENG4021","hrs":[{"dia":6,"hi":9,"hf":11}]},{"cod":"ENG4021","hrs":[{"dia":6,"hi":11,"hf":13}]},{"cod":"ENG4021","hrs":[{"dia":6,"hi":13,"hf":15}]},{"cod":"MAT4161","hrs":[{"dia":2,"hi":7,"hf":9},{"dia":3,"hi":7,"hf":9},{"dia":4,"hi":7,"hf":9}]},{"cod":"MAT4161","hrs":[{"dia":2,"hi":9,"hf":11},{"dia":3,"hi":9,"hf":11},{"dia":4,"hi":9,"hf":11}]},{"cod":"MAT4161","hrs":[{"dia":2,"hi":11,"hf":13},{"dia":3,"hi":11,"hf":13},{"dia":4,"hi":11,"hf":13}]},{"cod":"MAT4161","hrs":[{"dia":2,"hi":13,"hf":15},{"dia":3,"hi":13,"hf":15},{"dia":4,"hi":13,"hf":15}]},{"cod":"MAT4161","hrs":[{"dia":2,"hi":15,"hf":17},{"dia":3,"hi":15,"hf":17},{"dia":4,"hi":15,"hf":17}]}]
 
+var DDS = ["Sab", "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+let DDS_M = {SEG: 2, TER: 3, QUA: 4, QUI: 5, SEX: 6, SAB: 7, DOM: 8};
+
 
 
 def adicionarTurma(cod, hrs):

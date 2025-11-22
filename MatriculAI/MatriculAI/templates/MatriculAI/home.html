@@ -16,14 +16,24 @@
         </div>
         <nav class="menu-principal">
             <a href="{% url 'paginaDuvidas' %}">Dúvidas</a>
-            <a href="{% url 'paginaLogin' %}">login</a>
-            <a href="{% url 'paginaCadastro' %}">cadastro</a>
-            <a href="{% url 'matricula' %}">matrícula</a>
         </nav>
 
     </header>
 
     <main>
+        <header class="hero">
+        <div class="container">
+            <h1>
+                <span class="gradient-text">Monte sua grade horária com<br>inteligência</span>
+            </h1>
+            <p>
+                O MaticulAI é sua ferramenta inteligente para organizar as disciplinas da faculdade de forma visual e prática. Evite conflitos de horário e otimize seu semestre!
+            </p>
+            <a href="{% url 'paginaLogin'%}" class="btn-gradient">
+                Começar a Montar Grade
+            </a>
+        </div>
+    </header>
          <section class="features-section">
         <div class="container">
             <h2 class="section-title">Como funciona?</h2>
@@ -31,6 +41,7 @@
             <div class="features-grid">
                 <article class="feature-card">
                     <div class="icon-circle icon-blue">
+                        <img src="{% static 'MatriculAI/img/Grade.png' %}" alt="Icone de grade" class="icones_ensiar">
                         <i class="fa-regular fa-calendar"></i>
                     </div>
                     <h3>1. Visualize a Grade</h3>
@@ -39,6 +50,7 @@
                 
                 <article class="feature-card">
                     <div class="icon-circle icon-purple">
+                        <img src="{% static 'MatriculAI/img/Matérias.png' %}" alt="Icone de Cérebro" class="icones_ensiar">
                         <i class="fa-solid fa-brain"></i>
                     </div>
                     <h3>2. Adicione Matérias</h3>
@@ -47,6 +59,7 @@
 
                 <article class="feature-card">
                     <div class="icon-circle icon-green">
+                        <img src="{% static 'MatriculAI/img/Horário.png' %}" alt="Icone de Relógio" class="icones_ensiar">
                         <i class="fa-regular fa-clock"></i>
                     </div>
                     <h3>3. Aloque Horários</h3>
@@ -55,6 +68,7 @@
 
                 <article class="feature-card">
                     <div class="icon-circle icon-orange">
+                        <img src="{% static 'MatriculAI/img/Finalizar.png' %}" alt="Icone de feito" class="icones_ensiar">
                         <i class="fa-regular fa-circle-check"></i>
                     </div>
                     <h3>4. Finalize sua Grade</h3>
@@ -104,11 +118,11 @@
             </div>
         </div>
     </section>
-    section class="cta-section">
+    <section class="cta-section">
         <div class="container">
             <h2>Pronto para organizar seu semestre?</h2>
             <p>Comece agora a montar sua grade horária ideal</p>
-            <a href="#" class="btn-gradient">
+            <a href="{% url 'paginaLogin' %}" class="btn-gradient">
                 Começar a Montar a Grade
             </a>
         </div>

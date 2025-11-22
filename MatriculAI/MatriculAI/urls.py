@@ -24,6 +24,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.home, name="home"),
     path('duvidas/', views.paginaDuvidas, name="paginaDuvidas"),
+    path('login/',views.paginaLogin, name="paginaLogin"),
     path('cadastro/', views.paginaCadastro, name="paginaCadastro"),
     path('matricula/', views.matricula, name="matricula"),
     #path('MatriculAI/', include('MatriculAI.urls')),

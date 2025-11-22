@@ -21,6 +21,17 @@
     margin-bottom: 0;
 }
 
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin: -2rem -2rem 0 -2rem;
+    padding: 1rem 3rem;
+}
+
 .titulo-header {
     display: flex;
     align-items: center;
@@ -47,6 +58,8 @@
 .menu-principal a:hover {
     color: var(--cor-principal, #4a4eee); 
 }
+
+
 
 * {
 margin: 0;
@@ -181,6 +194,12 @@ align-items: center;
 justify-content: center;
 font-size: 1.5rem;
 margin-bottom: 24px;
+}
+
+.icones_ensiar{
+    width: 60px; 
+    height: 60px;
+    margin-bottom: 0;
 }
 
 .icon-blue { background-color: #EFF6FF; color: #3B82F6; }

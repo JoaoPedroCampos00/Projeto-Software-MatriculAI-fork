@@ -14,7 +14,7 @@
         <p class="sel">Insira o código da Matéria:  <textarea id="cod" style="margin: 0px;font-size: 123%;resize: none;width: 188px;height: 31px;border-radius: 5px;border: 1px solid #767676;margin-left: 30px;" name="cod"></textarea></p>
         <p style="margin-top: -12px; margin-bottom: -12px;"><button  class="add_turma" style="width: auto;" type="submit" name="pesquisar" value="pesquisar">Buscar no Banco de Dados da PUC</button><br><br> ou </p>
         
-        <p class="sel">Insira os horários da turma: <select style="width: 212.25px;height: 30px;margin-left: 30px;" onclick="mostraCalendario()" id="horarios"><option id="horarios_text"></option>
+        <p class="sel">Insira os horários da turma: <select style="width: 212.25px;height: 30px;margin-left: 30px;" id="horarios"><option id="horarios_text"></option>
         </select></p>
         
         <table id="calendario" class="ins_horario">
@@ -141,7 +141,9 @@
             </tbody>
         </table></div>
         
-        <button id="possibilidades" onclick="testaPossibilidades()" style="
+        <form action="testarPossibilidades" method="post">
+            {% csrf_token %}
+        <button id="possibilidades" type="submit" style="
     width: 287px;
     height: 62px;
     align-items: flex-start;
@@ -156,28 +158,41 @@
     border: none;
     margin-top: 25px;
     margin-bottom: 25px;
-">Criar todos os horários possíveis</button>
+">Criar todos os horários possíveis</button></form>
         
-<div class="ttabela"><p style="
+<div class="ttabela"><div style="
     font-size: 24px;
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
-"><span id="cont_tab">1/2 </span><button style="
+"><p id="cont_tab" style="margin: 0;">1/2 </p><form action="ant" method="post">
+    {% csrf_token %}
+    <button style="
     width: 29px;
     height: 29px;
     background-color: #ffffff;
     border-radius: 5px;
     border: 1px solid #000000;
     margin-left: 20px;
-" onclick="proxTabela(-1)">◀</button><button style="
+" type="submit" name="pg" value="-1">◀</button></form><form action="ant" method="post"><button style="
     width: 29px;
     height: 29px;
     background-color: #ffffff;
     border-radius: 5px;
     border: 1px solid #000000;
     margin-left: 10px;
-" onclick="proxTabela(1)">▶</button></p><table id="horario_pos"><tbody><tr><th style="width: 46.69px;"></th> <th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th></tr><tr><td id="0">07-08</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="6">08-09</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="12">09-10</td><td></td><td></td><td></td><td></td><td class="preenchido" rowspan="2">ENG4021</td></tr><tr><td id="18">10-11</td><td></td><td></td><td></td><td></td></tr><tr><td id="24">11-12</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="30">12-13</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="36">13-14</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="42">14-15</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="48">15-16</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td id="54">16-16</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+" type="submit" name="pg" value="1">▶</button></form></div>
+<table id="horario_pos"><tbody>
+    <tr><th style="width: 46.69px;"></th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th></tr>
+    {% for r in res %}
+    <tr>{{ r|safe }}</tr>
+    {% endfor %}
+</tbody></table></div>
 
 
         

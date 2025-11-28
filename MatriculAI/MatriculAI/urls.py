@@ -30,4 +30,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('matricula/addTurma', views.addTurma),
     path('matricula/testarPossibilidades', views.testarPossibilidades),
+    path('matricula/ant', views.proxTabela),
 ]

@@ -18,6 +18,8 @@ result = ["<td>07-08</td>"+"<td></td>"*5,
        "<td>14-15</td>"+"<td></td>"*5,
        "<td>15-16</td>"+"<td></td>"*5,
        "<td>16-17</td>"+"<td></td>"*5]
+pag = 1
+tot = 1
 
 def home(request):
     '''
@@ -42,7 +44,9 @@ def matricula(request):
 
     contexto = {
         'turmas': turmas,                # os resultados da pesquisa
-        'res': result
+        'res': result,
+        'pag': pag,
+        'tot': tot
     }
     
     return render(request, 'MatriculAI/matricula.html', contexto)
@@ -94,7 +98,12 @@ def proxTabela(request):
     global result
     global horarios
     global horarios_i
-    horarios_i += i
+    horarios_i = (horarios_i+i)%len(horarios)
     result = renderTabela(horarios[horarios_i])
     print(result)
-    return redirect(reverse('matricula'))
+    global pag
+    global tot
+    pag = horarios_i+1
+    tot = len(horarios)
+    print(horarios_i)
+    return redirect(reverse('matricula')+'#cont_tab')

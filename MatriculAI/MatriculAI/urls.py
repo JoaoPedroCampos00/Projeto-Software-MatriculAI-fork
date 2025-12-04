@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from MatriculAI import views
 from django.urls import include
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,7 +28,10 @@ urlpatterns = [
     path('cadastro/', views.paginaCadastro, name="paginaCadastro"),
     path('matricula/', views.matricula, name="matricula"),
     #path('MatriculAI/', include('MatriculAI.urls')),
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='MatriculAI/login.html'), name='login'),
+    path('accounts/signup/', views.paginaCadastro, name='criar_conta'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('login/', views.paginaLogin, name='paginaLogin'),
     path('matricula/addTurma', views.addTurma),
     path('matricula/testarPossibilidades', views.testarPossibilidades),
     path('matricula/ant', views.proxTabela),

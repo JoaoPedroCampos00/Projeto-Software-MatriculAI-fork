@@ -46,7 +46,8 @@ def matricula(request):
         'turmas': turmas,                # os resultados da pesquisa
         'res': result,
         'pag': pag,
-        'tot': tot
+        'tot': tot,
+        'en':  "" if tot > 1 else "disabled"
     }
     
     return render(request, 'MatriculAI/matricula.html', contexto)
@@ -59,7 +60,6 @@ def addTurma(request):
     if(not cod==''):
         if(pesquisar=='pesquisar'):
             #pesquisa no DB da PUC
-            #turmas.append({"cod": cod, "hrtxt": "pesquisei!"})
             res = buscarMat(cod)
             for r in res:
                 turmas.append(r)
@@ -105,5 +105,5 @@ def proxTabela(request):
     global tot
     pag = horarios_i+1
     tot = len(horarios)
-    print(horarios_i)
+    print(horarios[horarios_i])
     return redirect(reverse('matricula')+'#cont_tab')

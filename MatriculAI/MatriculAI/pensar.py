@@ -47,7 +47,7 @@ def buscarMat(cod):
         texto = ""
         for k in hors_i:
             texto += ("" if texto=="" else " / ")+DDS[int(k["dia"])]+" "+("0" if k["hi"]<10 else "")+str(k["hi"])+"-"+("0" if k["hf"]<10 else "")+str(k["hf"])
-        if(not [x for x in materias if x == {"cod": cod, "hrtxt": texto, "hrs": hors_i}]):
+        if(not [x for x in res if x == {"cod": cod, "hrtxt": texto, "hrs": hors_i}]):
             res.append({"cod": cod, "hrtxt": texto, "hrs": hors_i})
     return res
 
@@ -151,12 +151,26 @@ def addHora(materia, ino, materias, mats, possibilidades):
             else:
                 horeste = horarios[:]
                 horeste.sort(key=lambda e: e["cod"])
-                if(not any(x == horeste for x in possibilidades)):
-                    possibilidades.append(horeste)
+                if(not any(x["hor"] == horeste for x in possibilidades)):
+                    possibilidades.append({"hor": horeste, "dist": calcDist(horeste)})
+                    #possibilidades.append(horeste)
                     possibilidades_i = possibilidades_i + 1
                     print(possibilidades_i)
             horarios.pop()
 
+
+def calcDist(horario):
+    dias = [2,3,4,5,6]
+    hs = [[7,8],[8,9],[9,10],[10,11],[11,12],[12,13],[13,14],[14,15],[15,16],[16,17]]
+    
+    distTot = 0
+    for dia in range(2,7):
+        his = [x['hi'] for x in sum([x["hrs"] for x in horario], []) if x['dia'] == dia]
+        hfs = [x['hf'] for x in sum([x["hrs"] for x in horario], []) if x['dia'] == dia]
+        for i in hfs:
+            s = sorted([x for x in his if x >= i])
+            distTot += (s[0] - i) if s else 0
+    return distTot
 
 print(materias[0]["hrs"][0]["dia"])
 print(overlap(6,7,9,6,8,10))
@@ -167,4 +181,7 @@ def testaPossibilidades(mats, materias):
     horarios = []
     # mats = ["ENG4021","MAT4161"]
     addHora(mats[0], 0, materias, mats, possibilidades)
-    return possibilidades
+    print(possibilidades)
+    possibilidades.sort(key=lambda e: e["dist"])
+    print(possibilidades)
+    return [x["hor"] for x in possibilidades]

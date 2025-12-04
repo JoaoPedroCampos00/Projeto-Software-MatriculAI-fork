@@ -47,7 +47,7 @@ CSRF_TRUSTED_ORIGINS = [
    'https://127.0.0.1:8000',
 ]
 
-LOGIN_REDIRECT_URL = '/MatriculAI/home/'
+LOGIN_REDIRECT_URL = '/matricula/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 

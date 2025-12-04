@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from MatriculAI.pensar import celulaclick, traduzirTexto, estaSelecionado, buscarMat, renderTabela, testaPossibilidades, gethrs
+from django.views.decorators.csrf import csrf_exempt
 
 DDS = ["Sab", "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
 DDS_M = {"SEG": 2, "TER": 3, "QUA": 4, "QUI": 5, "SEX": 6, "SAB": 7, "DOM": 8};
@@ -40,6 +41,7 @@ def paginaCadastro(request):
 
     return render(request, 'MatriculAI/criarConta.html')
 
+@csrf_exempt
 def matricula(request):
 
     contexto = {
@@ -52,6 +54,7 @@ def matricula(request):
     
     return render(request, 'MatriculAI/matricula.html', contexto)
 
+@csrf_exempt
 def addTurma(request):
     cod = request.POST.get('cod')
     cod = cod.upper()
@@ -75,6 +78,7 @@ def addTurma(request):
             turmas.append({"cod": cod, "hrs": hrs, "hrtxt": traduzirTexto(horas_sel)})
     return redirect(reverse('matricula'))
 
+@csrf_exempt
 def testarPossibilidades(request):
     
     horario = [{"cod": "ENG4021", "hrs": [{"dia": 5, "hi": 9, "hf": 11},{"dia": 6, "hi": 7, "hf": 9}] }]
@@ -87,6 +91,7 @@ def testarPossibilidades(request):
 
     return proxTabela(request)
 
+@csrf_exempt
 def proxTabela(request):
 
     i = request.POST.get("pg")

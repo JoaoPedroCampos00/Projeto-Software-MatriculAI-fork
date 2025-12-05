@@ -4,8 +4,11 @@ DDS = ["Sab", "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
 DDS_M = {"SEG": 2, "TER": 3, "QUA": 4, "QUI": 5, "SEX": 6, "SAB": 7, "DOM": 8};
 
 import json
-
-with open('MatriculAI/MatriculAI/dbPUC.json','r') as file:
+from pathlib import Path
+_db_path = Path(__file__).resolve().parent / "dbPUC.json"
+if not _db_path.exists():
+    raise FileNotFoundError(f"Arquivo não encontrado: {_db_path}")
+with _db_path.open('r', encoding='utf-8') as file:
     turmas_imp_e = json.load(file)
 
 def adicionarTurma(cod, texto, hrs):
